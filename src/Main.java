@@ -7,6 +7,9 @@ public class Main{
     
 //---------------------------------------------------MAIN METHOD-----------------------------------------
     public static void main(String[] args) throws Exception {
+
+        Player player1 = new Player("Player 1", 'X'); //Declare Player 1
+        Player player2 = new Player("Player 2", 'O'); //Declare Player 2
         
         //similar to the tic tac toe game we will make a grid with a 2d array
         char[][] grid = new char[x][y];
@@ -18,8 +21,10 @@ public class Main{
             }
         }
         
-        //print method call
-        printGame(grid);
+        
+        printGame(grid); //print method call
+        System.out.println(player1.getName() + " is '" + player1.getID() + "'"); //print the name and ID of player
+        System.out.println(player2.getName() + " is '" + player2.getID() + "'");//print the name and ID of player
 
     }
 
@@ -39,19 +44,12 @@ public class Main{
         
         // Print col numbers at the bottom
         System.out.print(" "); //space between numbers
-        for (int col = 0; col < 6; col++) { //declare col = 0, for each col in length of grid(6) loop, then add 1 to col
+        for (int col = 0; col < 6; col++) { //same for loop as before, this time just for number clarity
             System.out.print(" " + col + "  "); //print (space, "col number", space)
         }
         System.out.println(); //separate from console for clean look
     }
-//--------------------------------THE PLAYERS----------------------------------
 
-
-
-
-
-
-//---------------------------------THE MOVE-----------------------------------
 
 
 
